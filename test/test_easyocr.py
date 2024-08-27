@@ -9,7 +9,7 @@ class MyTestCase(unittest.TestCase):
         '''
         reader = easyocr.Reader(['vi', 'en'])
 
-        img_path = r'G:\Projects\AIC-2024\Mr.Gia\AllKeyFrameTest\V1_037.jpg'
+        img_path = r'C:\Data\image.jpg'
         img_text = reader.readtext(img_path)
         final_text = ""
 
