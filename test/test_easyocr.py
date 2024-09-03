@@ -9,13 +9,14 @@ class MyTestCase(unittest.TestCase):
         '''
         reader = easyocr.Reader(['vi', 'en'])
 
-        img_path = r'C:\Data\image.jpg'
+        img_path = 'data/V1_037.jpg'
         img_text = reader.readtext(img_path)
         final_text = ""
 
         for _, text, __ in img_text:  # _ = bounding box, text = text and __ = confident level
-            print(text)
-
+            final_text += text
+            final_text += " "
+        print(final_text)
         # self.assertEqual(True, False)  # add assertion here
 
 if __name__ == '__main__':
